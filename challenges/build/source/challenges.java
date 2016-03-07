@@ -26,7 +26,7 @@ public void setup() {
 
 public void draw() {
   fill(randomColor(0, 100));
-  rect(column * tileSize, row, tileSize, tileSize);
+  line(column * tileSize, row, tileSize * column + tileSize, row + tileSize);
   column++;
   if (column * tileSize > width) {
     row = row + tileSize;
