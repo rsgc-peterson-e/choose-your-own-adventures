@@ -9,7 +9,7 @@ void setup() {
 }
 
 void draw() {
-  fill(randomColor(0, 160));
+  fill(randomColor(0, 100));
   rect(column * tileSize, row, tileSize, tileSize);
   column++;
   if (column * tileSize > width) {
