@@ -25,7 +25,7 @@ public void setup() {
 }
 
 public void draw() {
-  fill(randomColor(0, 100));
+  fill(randomColor(0, 160));
   rect(column * tileSize, row, tileSize, tileSize);
   column++;
   if (column * tileSize > width) {
@@ -39,9 +39,8 @@ public int randomColor(int c1, int c2) { //returns one or the other grayscale co
     return c1;
   } else if (random(0, 1) < 0.5f) {
     return c2;
-  } else {
-    return 1;
   }
+  return 0;
 }
   public void settings() {  size(480, 680); }
   static public void main(String[] passedArgs) {

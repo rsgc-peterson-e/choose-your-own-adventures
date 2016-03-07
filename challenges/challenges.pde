@@ -9,7 +9,7 @@ void setup() {
 }
 
 void draw() {
-  fill(randomColor(0, 100));
+  fill(randomColor(0, 160));
   rect(column * tileSize, row, tileSize, tileSize);
   column++;
   if (column * tileSize > width) {
@@ -23,7 +23,6 @@ int randomColor(int c1, int c2) { //returns one or the other grayscale color the
     return c1;
   } else if (random(0, 1) < 0.5) {
     return c2;
-  } else { // else statement should only run if the function did not work
-    return -1;
   }
+  return 0; // return the color black if the above conditionals are false
 }
