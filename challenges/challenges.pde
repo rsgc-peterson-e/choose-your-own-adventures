@@ -4,7 +4,7 @@ int column = 0;
 int y = 0;
 
 void setup() {
-  size(400, 400);
+  size(480, 680);
 }
 
 void draw() {

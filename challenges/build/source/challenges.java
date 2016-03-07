@@ -31,7 +31,7 @@ public void draw() {
     column = 0;
   }
 }
-  public void settings() {  size(400, 400); }
+  public void settings() {  size(480, 680); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "challenges" };
     if (passedArgs != null) {
