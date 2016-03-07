@@ -19,16 +19,28 @@ int tileSize = 40;
 int column = 0;
 int y = 0;
 
+
 public void setup() {
   
 }
 
 public void draw() {
+  fill(randomColor(0, 100));
   rect(column * tileSize, y, tileSize, tileSize);
   column++;
   if (column * tileSize > width) {
     y = y + tileSize;
     column = 0;
+  }
+}
+
+public int randomColor(int c1, int c2) {
+  if (random(0, 1) > 0.5f) {
+    return c1;
+  } else if (random(0, 1) < 0.5f) {
+    return c2;
+  } else {
+    return 1;
   }
 }
   public void settings() {  size(480, 680); }
