@@ -17,15 +17,19 @@ public class challenges extends PApplet {
 // Name: Ethan Peterson
 int tileSize = 40;
 int column = 0;
+int y = 0;
 
 public void setup() {
   
 }
 
 public void draw() {
-  rect(column * tileSize, 0, tileSize, tileSize);
-
+  rect(column * tileSize, y, tileSize, tileSize);
   column++;
+  if (column * tileSize > width) {
+    y = y + tileSize;
+    column = 0;
+  }
 }
   public void settings() {  size(400, 400); }
   static public void main(String[] passedArgs) {
