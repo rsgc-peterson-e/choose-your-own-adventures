@@ -17,7 +17,7 @@ public class challenges extends PApplet {
 // Name: Ethan Peterson
 int tileSize = 40;
 int column = 0;
-int y = 0;
+int row = 0;
 
 
 public void setup() {
@@ -26,15 +26,15 @@ public void setup() {
 
 public void draw() {
   fill(randomColor(0, 100));
-  rect(column * tileSize, y, tileSize, tileSize);
+  rect(column * tileSize, row, tileSize, tileSize);
   column++;
   if (column * tileSize > width) {
-    y = y + tileSize;
-    column = 0;
+    row = row + tileSize;
+    column = 0; // reset column val so the squares are drawn in every new row starting from the left
   }
 }
 
-public int randomColor(int c1, int c2) {
+public int randomColor(int c1, int c2) { //returns one or the other grayscale color the user inputted
   if (random(0, 1) > 0.5f) {
     return c1;
   } else if (random(0, 1) < 0.5f) {
