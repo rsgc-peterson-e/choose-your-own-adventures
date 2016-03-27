@@ -25,13 +25,11 @@ public void setup() {
 }
 
 public void draw() {
-  fill(255);
-  rect(column * tileSize, row, tileSize, tileSize);
   fill(0);
-  line(column * tileSize, row, tileSize * column + tileSize, row + tileSize);
+  line(column * tileSize, row, tileSize * column + tileSize, row + tileSize); // draw the pair of crossed lines
   line((column * tileSize) + tileSize, row, tileSize * column, row + tileSize);
   column++;
-  if (column * tileSize > width) {
+  if (column * tileSize > width) { // check if the tiles have been drawn past the width of the canvas and reset the variables accordingly
     row = row + tileSize;
     column = 0; // reset column val so the squares are drawn in every new row starting from the left
   }
